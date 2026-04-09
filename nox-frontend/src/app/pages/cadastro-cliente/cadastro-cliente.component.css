@@ -1,0 +1,119 @@
+/* Container geral */
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #1f2a38, #283746);
+  font-family: 'Arial', sans-serif;
+}
+
+/* Card central */
+.card {
+  background: #111826;
+  padding: 40px 30px;
+  border-radius: 12px;
+  width: 320px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+  text-align: center;
+  color: #ffffff;
+}
+
+/* Títulos e textos */
+.card h2 {
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+.card p {
+  margin-bottom: 25px;
+  color: #a0a0a0;
+}
+
+/* Inputs estilo linha */
+input {
+  width: 100%;
+  padding: 10px 5px;
+  margin-bottom: 20px;
+  border: none;
+  border-bottom: 1px solid #555;
+  background: transparent;
+  color: #fff;
+  outline: none;
+  font-size: 14px;
+}
+
+input::placeholder {
+  color: #888;
+}
+
+/* Botão SUBMIT */
+button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background: #00bcd4;
+  color: #111826;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #00a1b0;
+}
+
+/* Link de cadastro */
+span {
+  display: block;
+  margin-top: 15px;
+  font-size: 14px;
+  color: #888;
+}
+
+.btn-cadastro {
+  background: none;
+  border: none;
+  color: #00bcd4;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 0;
+}
+
+/* Modal */
+.modal {
+  display: flex;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0,0,0,0.7);
+}
+
+.modal-content {
+  background: #111826;
+  padding: 30px;
+  border-radius: 12px;
+  width: 320px;
+  color: #fff;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #888;
+}
+
+.close:hover {
+  color: #fff;
+}

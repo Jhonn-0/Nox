@@ -1,0 +1,25 @@
+<div class="portal-container">
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="user-icon">
+      <img src="assets/Img/teste.jpg" alt="Usuário">
+    </div>
+
+    <nav class="menu">
+      <button class="menu-toggle" (click)="toggleMenu()">
+        &#9776; Menu
+      </button>
+
+      <ul [class.open]="menuAberto">
+        <li (click)="abrirPagina('consultas')">Consultas</li>
+        <!--<li (click)="abrirPagina('medicos')">Médicos</li>-->
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Conteúdo principal -->
+  <main class="main-content">
+  <h1>{{ paginaAtual | titlecase }}</h1>
+  <app-consulta *ngIf="paginaAtual === 'consultas'"></app-consulta>
+  </main>
+</div>

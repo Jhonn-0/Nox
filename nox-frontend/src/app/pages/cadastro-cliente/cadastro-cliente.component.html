@@ -1,0 +1,15 @@
+<div class="container">
+<div class="modal show">
+  <div class="modal-content">
+    <span class="close" (click)="fechar.emit()">&times;</span>
+    <h2>Cadastro de Cliente</h2>
+    <form (ngSubmit)="enviarCadastro()">
+      <input type="text" [(ngModel)]="novoCliente.nome" name="nome" placeholder="Nome" required>
+      <input type="email" [(ngModel)]="novoCliente.email" name="emailCadastro" placeholder="Email" required>
+      <input type="password" [(ngModel)]="novoCliente.senha" name="senhaCadastro" placeholder="Senha" required>
+      <input type="tel" [(ngModel)]="novoCliente.telefone" name="telefoneCadastro" placeholder="Telefone" required>
+      <button type="submit">Cadastrar</button>
+    </form>
+  </div>
+</div>
+</div>

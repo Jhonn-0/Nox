@@ -1,0 +1,34 @@
+<!-- Filtros -->
+<div class="consulta-filtros">
+  <label>
+    Especialidade:
+    <select [(ngModel)]="especialidadeSelecionada">
+      <option value="">Todas</option>
+      <option *ngFor="let esp of especialidades" [value]="esp">{{ esp }}</option>
+    </select>
+  </label>
+
+  <label>
+    Data:
+    <input type="date" [(ngModel)]="dataSelecionada">
+  </label>
+</div>
+
+<!-- Carrossel estilo stack -->
+<div class="medicos-carrossel-container">
+  <div class="medicos-carrossel">
+    <div *ngFor="let medico of medicosFiltrados; let i = index"
+         class="medico-card"
+         [class.central]="i === cardCentral">
+      <img [src]="medico.foto" alt="{{ medico.nome }}">
+      <h3>{{ medico.nome }}</h3>
+      <p>{{ medico.especialidade }}</p>
+      <button>Agendar</button>
+    </div>
+  </div>
+
+  <div class="controls">
+    <button (click)="moverEsquerda()">&#10094;</button>
+    <button (click)="moverDireita()">&#10095;</button>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+<div [class.hidden]="modalAberto" class="container">
+  <div class="card">
+    <h2>Bem-vindo 👋</h2>
+    <p>Faça login para continuar</p>
+
+    <form (ngSubmit)="entrar()">
+      <input type="email" [(ngModel)]="email" name="email" placeholder="Email" required>
+      <input type="password" [(ngModel)]="senha" name="senha" placeholder="Senha" required>
+      <button type="submit" class="btn-entrar">Entrar</button>
+    </form>
+
+    <span>
+      Não tem conta? 
+      <button class="btn-cadastro" (click)="modalAberto = true">Cadastrar</button>
+    </span>
+  </div>
+</div>
+
+<!-- Modal -->
+<app-cadastro-cliente
+  *ngIf="modalAberto"
+  (fechar)="modalAberto = false"
+  (cadastrar)="cadastrarCliente($event)">
+</app-cadastro-cliente>
